@@ -1,0 +1,94 @@
+# ======================================
+# Filepaths
+# ======================================
+event_path: "Input/SP2210.csv"
+tif_path: "Input/Base2210.tif"
+save_plot: true
+outputfile: 'Output\Subdivided_X.jpg'
+legend_output: 'Output\SubdivideLegend.jpeg'
+# ======================================
+# General Settings
+# ======================================
+
+subdivide: true      # Show temporal fragmentation, ie. how plumes in shorter temporal threshold make up larger temporal threshold
+approach: METABALLS         # Options: KDE, METABALLS
+grid_size: 140        # Voxel grid resolution, higher value equals finer resolution
+pad: true             # Padding around event distribution for voxel grid, such that kde and metaballs enclose the event distribution
+pad_factor: 0.2       # how far to pad (0.2 = 20% around)
+bandwidth: 0.4       # KDE bandwidth
+
+# ======================================
+# Camera Settings
+# ======================================
+camera:
+  azimuth: 270
+  elevation: 75
+  distance: auto # auto or positive floating point
+
+# ======================================
+# Event Cloud Settings
+# ======================================
+event_cloud:
+  scale_factor: 60 # was using 80
+  single_color: (1, 0, 0) # Red Default , # R, G, B values between 0 and 1
+
+# ======================================
+# Volume Settings
+# ======================================
+volume_styles:
+  lighting:
+    shade: false
+    ambient: 1.0
+    diffuse: 0.0
+    specular: 0.0
+
+  effects:
+    perlin_noise:
+      enabled: true
+      scale: 0.05 # Spatial frequency of noise, controls wavelength. Smaller values (0.001) = larger smoother blobs, larger values: (0.05) smaller jittery
+      amplitude: 0.5 # how impactful the noise is on the volume density (larger value (1) more distortion, smaller value (0.2) subtle feathery edges)
+
+    opacity_flicker:
+      enabled: false
+      magnitude: 0.1  # how much to flicker
+
+  unified:
+    otf_points:
+      - [0.00, 0.00]
+      - [0.01, 0.02]
+      - [0.05, 0.05]
+      - [0.10, 0.07]
+      - [0.25, 0.2]
+      - [0.50, 0.4]
+      - [0.75, 0.65]
+      - [1.00, 0.8]
+    ctf_points:
+      - [0.00, 0.10, 0.05, 0.25]   # Deep violet-blue (electric faint glow)
+      - [0.10, 0.15, 0.25, 0.55]   # Dim blue-purple
+      - [0.30, 0.00, 0.85, 1.00]   # Electric cyan (strong current feel)
+      - [0.60, 0.75, 1.00, 0.90]   # Teal-white mix (glow intensifies)
+      - [1.00, 1.00, 1.00, 1.00]   # Blinding white-hot (peak intensity)
+
+  subdivided:
+    otf_points:
+      - [0.00, 0.00]
+      - [0.01, 0.02]
+      - [0.05, 0.05]
+      - [0.10, 0.07]
+      - [0.25, 0.2]
+      - [0.50, 0.4]
+      - [0.75, 0.65]
+      - [1.00, 0.8]
+
+# ======================================
+# Opacity Transfer Function (OTF)
+# Format: [value, opacity]
+# Top values are the edges of the surface,
+# bottom values are the core
+# ======================================
+# ======================================
+# Color Transfer Function (CTF)
+# Format: [value, R, G, B]
+# Top values are the edges of the surface,
+# bottom values are the core
+# ======================================

@@ -1,0 +1,5 @@
+pandas
+geojson
+pyshp
+xml.etree.ElementTree
+concurrent.futures

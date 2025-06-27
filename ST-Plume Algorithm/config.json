@@ -1,0 +1,28 @@
+{
+    "parameters": {
+        "ExportPlumesWithEventCountGreaterThan": 30,
+        "temporal_epsilons": [14, 28,42],
+        "spatial_epsilon": 200,
+        "UseDynamicMinNeighbors": 0,
+        "MaxMinNeighbors": 10,
+        "UseTemporalDensityFilter": 0,
+        "TemporalDensityPSI": 0.3,
+        "TemporalDensityOmega": 0.5,
+        "TemporalDensityDecay": 0.05,
+        "TemporalDensityScaling": 10
+    },
+    
+    "input_files": {
+        "event_file": "Input/events.csv",
+        "zone_file": "Input/zones.csv",
+        "zone_link_file": "Input/zone_links.csv"
+    },
+    "output_directory": "Output/",
+    
+    "greater": 30,
+    "output_format": "csv",
+    "logging": {
+        "level": "INFO",
+        "log_file": "Output/st_plume.log"
+    }
+}

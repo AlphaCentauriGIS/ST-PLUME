@@ -12,3 +12,10 @@ A case study of crime events in Dallas, Texas, USA, demonstrated the algorithm's
 
 We revised the metaball algorithm and Perlin noise perturbations to visualize the plumes, their structures, and evolutions over space and time. 
 Compared to the popular ST-DBSCAN algorithm, ST-Plume is competitive in computational efficiency but can represent and compute dynamic places with deeper geographic insights
+
+
+## Included Projects
+
+Two projects are provided as part of the ST-Plume Program:
+    1. The ST-Plume Algorithm package including sample data and jupyter notebook workflow for demonstration
+    2. A 3D Plume visualization module to generate representations of resulting plumes.
