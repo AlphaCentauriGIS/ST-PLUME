@@ -17,5 +17,5 @@ Compared to the popular ST-DBSCAN algorithm, ST-Plume is competitive in computat
 ## Included Projects
 
 Two projects are provided as part of the ST-Plume Program:
-    1. The ST-Plume Algorithm package including sample data and jupyter notebook workflow for demonstration
-    2. A 3D Plume visualization module to generate representations of resulting plumes.
+    1. The ST-Plume Algorithm package including filtered police event data for demonstration. Filters remove events associated with Juvenile Victims, Sexual Assualts, Mental Health, and Family Violence
+    2. A 3D Plume visualization module to generate representations of resulting plumes with an example provided.
